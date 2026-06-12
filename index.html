@@ -220,6 +220,289 @@ footer{background:var(--bg3);border-top:1px solid var(--border);padding:2rem;tex
 .btn-primary,.btn-ghost{text-align:center}
 .toast{right:1rem;left:1rem;max-width:unset}
 }
+
+/* ===== RESPONSIVE PATCH: append below existing CSS ===== */
+body{
+  overflow-x:hidden;
+}
+
+img, video, iframe{
+  max-width:100%;
+  height:auto;
+}
+
+section{
+  width:100%;
+}
+
+/* Larger tablets */
+@media (max-width: 1024px){
+  .nav-inner,
+  .hero,
+  section,
+  .footer-inner{
+    max-width: 92vw;
+  }
+
+  .hero{
+    gap:2.5rem;
+  }
+
+  .hero img{
+    width:320px !important;
+    height:470px !important;
+  }
+
+  .projects-grid{
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  }
+
+  .skills-grid{
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  }
+}
+
+/* Tablets and phones */
+@media (max-width: 768px){
+  html{
+    font-size:15px;
+  }
+
+  .nav-inner{
+    padding:0 1rem;
+    height:60px;
+  }
+
+  nav{
+    position:sticky;
+    top:0;
+  }
+
+  .hero{
+    min-height:auto;
+    padding:92px 1rem 2rem;
+    flex-direction:column;
+    gap:1.5rem;
+    text-align:center;
+  }
+
+  .hero > div:first-child{
+    order:1;
+    width:100%;
+    display:flex;
+    justify-content:center;
+  }
+
+  .hero > div:first-child img{
+    width:min(100%, 320px) !important;
+    height:auto !important;
+    aspect-ratio: 19 / 28;
+  }
+
+  .hero-content{
+    order:2;
+    max-width:100%;
+  }
+
+  .hero-sub{
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .hero-links,
+  .hero-actions{
+    justify-content:center;
+  }
+
+  .stats-bar{
+    justify-content:center;
+    gap:1rem;
+    text-align:center;
+  }
+
+  .stat{
+    min-width:120px;
+  }
+
+  section{
+    padding:4rem 1rem;
+  }
+
+  .projects-grid,
+  .skills-grid,
+  .edu-cards{
+    grid-template-columns:1fr;
+  }
+
+  .contact-grid{
+    grid-template-columns:1fr;
+    gap:1.5rem;
+  }
+
+  .contact-form{
+    padding:1.25rem;
+  }
+
+  .project-card{
+    padding:1.25rem;
+  }
+
+  .skill-card,
+  .edu-card{
+    padding:1.1rem;
+  }
+
+  .exp-timeline{
+    padding-left:1.2rem;
+  }
+
+  .exp-item::before{
+    left:-1.2rem;
+  }
+
+  .footer-inner{
+    flex-direction:column;
+    text-align:center;
+    gap:0.75rem;
+  }
+
+  .footer-links{
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:1rem;
+  }
+
+  .toast{
+    right:1rem;
+    left:1rem;
+    max-width:none;
+    bottom:1rem;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px){
+  html{
+    font-size:14px;
+  }
+
+  .nav-inner{
+    padding:0 0.85rem;
+  }
+
+  .nav-logo{
+    font-size:13px;
+  }
+
+  .hero{
+    padding-top:84px;
+  }
+
+  .hero h1{
+    font-size:1.95rem !important;
+    line-height:1.15;
+  }
+
+  .hero-sub{
+    font-size:1rem;
+    line-height:1.7;
+  }
+
+  .hero-badge{
+    font-size:12px;
+    padding:5px 12px;
+  }
+
+  .btn-primary,
+  .btn-ghost,
+  .nav-cta{
+    width:100%;
+    justify-content:center;
+  }
+
+  .hero-actions{
+    flex-direction:column;
+    width:100%;
+  }
+
+  .hero-actions a{
+    width:100%;
+    text-align:center;
+  }
+
+  .stats-bar{
+    flex-direction:column;
+    align-items:center;
+    gap:0.9rem;
+  }
+
+  .stat{
+    width:100%;
+    align-items:center;
+  }
+
+  .stat-num{
+    font-size:1.5rem;
+  }
+
+  .section-title{
+    font-size:1.6rem;
+  }
+
+  .section-desc{
+    font-size:0.96rem;
+  }
+
+  .project-header{
+    gap:1rem;
+  }
+
+  .project-links{
+    flex-wrap:wrap;
+  }
+
+  .project-link-btn{
+    width:100%;
+    justify-content:center;
+  }
+
+  .contact-item{
+    padding:0.9rem 1rem;
+  }
+
+  .form-submit{
+    width:100%;
+  }
+
+  .mobile-menu{
+    padding:0.75rem 1rem;
+  }
+}
+
+/* Extra safety for very narrow screens */
+@media (max-width: 360px){
+  .hero h1{
+    font-size:1.75rem !important;
+  }
+
+  .nav-right{
+    gap:0.5rem;
+  }
+
+  .theme-toggle{
+    padding:5px 8px;
+    font-size:13px;
+  }
+
+  .hero-links{
+    gap:1rem;
+  }
+
+  .hero-link{
+    font-size:13px;
+  }
+}
+
 </style>
 </head>
 <body>
